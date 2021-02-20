@@ -1,0 +1,48 @@
+{
+	"name": "rust-devcontainer",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"shutdownAction": "stopCompose",
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/zsh",
+		// General settings
+		"files.eol": "\n",
+		"files.watcherExclude": {
+			"**/target/**": true
+		},
+		// Docker
+		"remote.extensionKind": {
+			"ms-azuretools.vscode-docker": "workspace"
+		},
+		// Debugger
+		"lldb.executable": "/usr/bin/lldb",
+	},
+	"extensions": [
+		// Console
+		"IBM.output-colorizer",
+		// Git
+		"eamodio.gitlens",
+		"mhutchie.git-graph",
+		// Docker
+		"ms-azuretools.vscode-docker",
+		// Language Support
+		"rust-lang.rust",
+		"matklad.rust-analyzer",
+		"serayuzgur.crates",
+		"vadimcn.vscode-lldb",
+		"VisualStudioExptTeam.vscodeintellicode",
+		// Linters and Formatters
+		"bungcip.better-toml",
+		"davidanson.vscode-markdownlint",
+		"editorconfig.editorconfig",
+		"mohsen1.prettify-json",
+		"shardulm94.trailing-spaces",
+		// Editor Helpers
+		"quicktype.quicktype", // paste json as code
+		"mutantdino.resourcemonitor",
+		"vscode-icons-team.vscode-icons"
+	],
+	// Comment out to connect as root instead.
+	"remoteUser": "vscode",
+}
